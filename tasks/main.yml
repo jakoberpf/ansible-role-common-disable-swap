@@ -12,6 +12,7 @@
     state: present
 
 - name: Disable swappiness
+  become: yes
   sysctl:
     name: "{{ item.name }}"
     value: "{{ item.value }}"
